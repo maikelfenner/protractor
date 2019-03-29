@@ -61,7 +61,7 @@ describe('Protractor demo app', function() {
 
 		browser.wait(ec.visibilityOf($('#layer_cart_product_quantity')), 3000, 'Elemento não apareceu');
 
-		expect($('#layer_cart_product_quantity').getText()).toEqual('3');		
+		expect($('#layer_cart_product_quantity').getText()).toEqual('2');		
 	});
 
 	it('Não deve diminuir quantidade selecionada se igual a 1', function() {
