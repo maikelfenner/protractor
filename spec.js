@@ -54,26 +54,14 @@ describe('Protractor demo app', function() {
 	});
 
 	it('Deve exibir quantidade ao adicionar produto no carrinho', function() {
-		$('.ajax_cart_no_product').getText().then(function(text) {
-			if(text != '(empty)') {
-				$('.shopping_cart > a').click();
-
-				$$('.icon-trash').each(function(elem, i) {
-					elem.click();
-				})
-			}
-		});
-		
-		browser.get('http://automationpractice.com');
-		
-		$('.product_img_link').click();
+		element.all(by.css('.product_img_link')).first().click();
 		$('.product_quantity_up').click();
 
 		$('#add_to_cart button').click();
 
 		browser.wait(ec.visibilityOf($('#layer_cart_product_quantity')), 3000, 'Elemento não apareceu');
 
-		expect($('#layer_cart_product_quantity').getText()).toEqual('2');		
+		expect($('#layer_cart_product_quantity').getText()).toEqual('3');		
 	});
 
 	it('Não deve diminuir quantidade selecionada se igual a 1', function() {
