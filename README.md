@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/maikelfenner/protractor.svg?branch=master)](https://travis-ci.org/maikelfenner/protractor)
+
 Critérios de Aceitação:
 
 DADO que o usuário deseja visualizar com mais detalhes a imagem do produto
